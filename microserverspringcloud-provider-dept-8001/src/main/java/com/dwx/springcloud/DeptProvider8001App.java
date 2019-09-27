@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DeptProvider8001App {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider8001App.class,args);
-
         System.out.println("springboot启动成功");
     }
 }
