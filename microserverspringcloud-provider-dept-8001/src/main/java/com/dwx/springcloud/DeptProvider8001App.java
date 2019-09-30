@@ -8,11 +8,6 @@ public class DeptProvider8001App {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider8001App.class,args);
 
-//      DWX分支提交
-        System.out.println("springboot启动成功");
-        System.out.println("springboot启动成功+DWX分支提交");//第一次合并dwx分支
-        int i = 0;
-        System.out.println(i);
-
+        System.out.println("DeptProvider8001App 启动成功......");
     }
 }
