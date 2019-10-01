@@ -8,6 +8,6 @@ public class DeptProvider8001App {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider8001App.class,args);
 
-        System.out.println("DeptProvider8001App 启动成功......");
+        System.out.println("com.dwx.springcloud.mapper.DeptProvider8001App 启动成功......");
     }
 }

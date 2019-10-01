@@ -9,21 +9,30 @@
   <sql id="Base_Column_List">
     dept_id, dept_name, db_source
   </sql>
+
+  <!--查询语句-->
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from dept
     where dept_id = #{deptId,jdbcType=BIGINT}
   </select>
+  <select id="selectAll" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from dept
+  </select>
+
+  <!--删除语句-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from dept
     where dept_id = #{deptId,jdbcType=BIGINT}
   </delete>
+
+  <!--插入语句-->
   <insert id="insert" parameterType="com.dwx.springcloud.entities.Dept">
-    insert into dept (dept_id, dept_name, db_source
-      )
-    values (#{deptId,jdbcType=BIGINT}, #{deptName,jdbcType=VARCHAR}, #{dbSource,jdbcType=VARCHAR}
-      )
+    insert into dept (dept_id, dept_name, db_source)
+        values (#{deptId,jdbcType=BIGINT}, #{deptName,jdbcType=VARCHAR}, DATABASE() )
   </insert>
   <insert id="insertSelective" parameterType="com.dwx.springcloud.entities.Dept">
     insert into dept
@@ -34,9 +43,7 @@
       <if test="deptName != null">
         dept_name,
       </if>
-      <if test="dbSource != null">
-        db_source,
-      </if>
+      DATABASE()
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="deptId != null">
@@ -45,19 +52,16 @@
       <if test="deptName != null">
         #{deptName,jdbcType=VARCHAR},
       </if>
-      <if test="dbSource != null">
-        #{dbSource,jdbcType=VARCHAR},
-      </if>
+      DATABASE()
     </trim>
   </insert>
+
+  <!--更新语句-->
   <update id="updateByPrimaryKeySelective" parameterType="com.dwx.springcloud.entities.Dept">
     update dept
     <set>
       <if test="deptName != null">
         dept_name = #{deptName,jdbcType=VARCHAR},
-      </if>
-      <if test="dbSource != null">
-        db_source = #{dbSource,jdbcType=VARCHAR},
       </if>
     </set>
     where dept_id = #{deptId,jdbcType=BIGINT}

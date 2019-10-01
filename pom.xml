@@ -6,24 +6,28 @@
 
     <groupId>com.dwx.springcloud</groupId>
     <artifactId>microserver-springcloud</artifactId>
+    <!--父模块要打成pom文件-->
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>microservercloud-api</module>
-        <module>microserverspringcloud-provider-dept-8001</module>
         <module>mybatis-generator</module>
+        <module>microservercloud-provider-dept-8001</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--JDK编译版本是JDK1.8-->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!--全局定义junit、log4j与lombok的版本-->
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
     </properties>
 
 
+    <!--依赖管理-->
     <dependencyManagement>
         <dependencies>
             <dependency>

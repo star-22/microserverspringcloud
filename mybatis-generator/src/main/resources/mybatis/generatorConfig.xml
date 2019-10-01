@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
+
+
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
 <generatorConfiguration>
     <properties resource="mybatis/config.properties"/>
 
     <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF-8"/>
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -39,6 +41,13 @@
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
+        <!--m目前暂不支持-->
+        <!-- 生成service的包名和位置 -->
+        <!--<javaServiceGenerator targetPackage="${targetServicePackage}" targetProject="${targetJavaProject}">-->
+            <!--&lt;!&ndash; 这里是继承的通用Service，可自行更改。不需要注释掉即可&ndash;&gt;-->
+            <!--<property name="implementationPackage" value="${targetServiceImplPackage}"/>-->
+        <!--</javaServiceGenerator>-->
+
         <sqlMapGenerator targetPackage="${targetXMLPackage}" targetProject="${targetResourcesProject}">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
@@ -48,6 +57,8 @@
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
+
+
 
         <!--全部表参与逆向工程-->
         <!--以下example为false，表示不会生成example类，否则将自动生成example类-->
