@@ -2,7 +2,6 @@ package com.dwx.springcloud.web.controller;
 
 import com.dwx.springcloud.entities.Dept;
 import com.dwx.springcloud.service.IDeptService;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -44,7 +43,8 @@ public class DeptController {
     @ResponseBody
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public List<Dept> list(){
-        return deptService.getList();
+        List<Dept> depts = deptService.getList();
+        return depts;
     }
 
     @ResponseBody

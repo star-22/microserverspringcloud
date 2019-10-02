@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: microservercloud-provider-dept-8001
+    name: microservercloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -23,3 +23,17 @@ mybatis:
 #  config-location: classpath:mybatis/mybatis-config.xml   # mybatis配置文件，SpringBoot可以不用，全部配置在这里（如果在这里配置了，就不要再有mybatis的配置文件）
   type-aliases-package: com.dwx.springcloud.entities      # 与数据库表对应映射的JavaModel类
   mapper-locations: classpath:mybatis/mapper/**/*.xml     # 与持久化接口层实现xml文件位置
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: microservercloud-dept8001  # 自定义微服务名称
+    prefer-ip-address: true # 显示IP地址
+
+info:
+  app.name: microservercloud-dept8001
+  company.name: com.dwx.springcloud
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
