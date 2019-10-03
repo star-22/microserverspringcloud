@@ -12,6 +12,8 @@
         <module name="microservercloud-eureka-7002" />
         <module name="microservercloud-eureka-7003" />
         <module name="microservercloud-provider-dept-8001" />
+        <module name="microservercloud-provider-dept-8002" />
+        <module name="microservercloud-provider-dept-8003" />
         <module name="mybatis-generator" />
       </profile>
     </annotationProcessing>

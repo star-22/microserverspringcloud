@@ -15,7 +15,8 @@ import java.util.List;
 @RequestMapping("/dept_consumer")
 public class DeptController_Consumer {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001/dept";
+    //private static final String REST_URL_PREFIX = "http://localhost:8001/dept";
+    private static final String REST_URL_PREFIX = "http://MICROSERVERCLOUD-DEPT/dept";     //通过Eureka注册中心中的微服务名称获取连接，不在关心地址与端口号
 
     @Autowired
     private RestTemplate restTemplate;

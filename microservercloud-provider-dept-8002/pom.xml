@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservercloud-provider-dept-8001</artifactId>
+    <artifactId>microservercloud-provider-dept-8002</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>

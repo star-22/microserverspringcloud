@@ -17,6 +17,8 @@
         <module>mybatis-generator</module>
         <module>microservercloud-eureka-7002</module>
         <module>microservercloud-eureka-7003</module>
+        <module>microservercloud-provider-dept-8002</module>
+        <module>microservercloud-provider-dept-8003</module>
     </modules>
 
     <properties>
