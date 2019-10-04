@@ -6,3 +6,6 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
     register-with-eureka: false   #该服务无需注册进入Eureka注册中心（消费端）
+feign:
+  hystrix:
+    enabled: true

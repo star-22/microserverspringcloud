@@ -2,9 +2,14 @@ package com.dwx.springcloud.web.controller;
 
 import com.dwx.springcloud.entities.Dept;
 import com.dwx.springcloud.service.IDeptService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -22,12 +27,25 @@ public class DeptController {
      */
     @ResponseBody
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
+    @HystrixCommand(fallbackMethod = "processHystrix_GET")
     public Dept get(@PathVariable("id") Long id){
         Dept dept = deptService.get(id);
-
+        if (dept == null){
+            throw new RuntimeException("该ID："+ id +"没有对应的信息");
+        }
         return dept;
 
     }
+
+    public Dept processHystrix_GET(@PathVariable("id") Long id){
+
+        return new Dept().setDeptId(id)
+                .setDeptName("该ID："+ id +"没有对应的信息,null--@HystrixCommand")
+                .setDbSource("no this database in MySQL");
+
+    }
+
+
 
     /**
      * 添加一个部门信息

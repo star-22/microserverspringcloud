@@ -9,12 +9,14 @@
         <module name="microservercloud-api" />
         <module name="microservercloud-consumer-dept-80" />
         <module name="microservercloud-consumer-dept-feign-81" />
+        <module name="microservercloud-consumer-hystrix-dashboard-9001" />
         <module name="microservercloud-eureka-7001" />
         <module name="microservercloud-eureka-7002" />
         <module name="microservercloud-eureka-7003" />
         <module name="microservercloud-provider-dept-8001" />
         <module name="microservercloud-provider-dept-8002" />
         <module name="microservercloud-provider-dept-8003" />
+        <module name="microservercloud-provider-dept-hystrix-8004" />
         <module name="mybatis-generator" />
       </profile>
     </annotationProcessing>

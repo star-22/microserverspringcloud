@@ -21,6 +21,8 @@
         <module>microservercloud-provider-dept-8003</module>
         <module>microservercloud-provider-dept-feign-8004</module>
         <module>microservercloud-consumer-dept-feign-81</module>
+        <module>microservercloud-provider-dept-hystrix-8004</module>
+        <module>microservercloud-consumer-hystrix-dashboard-9001</module>
     </modules>
 
     <properties>

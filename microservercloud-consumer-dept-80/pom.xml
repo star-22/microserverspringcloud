@@ -18,6 +18,7 @@
             <version>${project.version}</version>
         </dependency>
 
+        
         <!--Ribbon相关的-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
