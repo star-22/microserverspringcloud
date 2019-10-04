@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservercloud-api" />
         <module name="microservercloud-consumer-dept-80" />
+        <module name="microservercloud-consumer-dept-feign-81" />
         <module name="microservercloud-eureka-7001" />
         <module name="microservercloud-eureka-7002" />
         <module name="microservercloud-eureka-7003" />
@@ -19,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="microservercloud-consumer-dept-8001" target="1.8" />
+      <module name="microservercloud-provider-dept-feign-8004" target="1.8" />
       <module name="microserverspringcloud-provider-dept-8001" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/microservercloud-api/microservercloud-consumer-dept-80/pom.xml" />
         <option value="$PROJECT_DIR$/microservercloud-consumer-dept-8001/pom.xml" />
+        <option value="$PROJECT_DIR$/microservercloud-provider-dept-feign-8004/pom.xml" />
       </set>
     </option>
   </component>
